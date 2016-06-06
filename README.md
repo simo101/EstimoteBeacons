@@ -15,6 +15,8 @@ Ice = Lightblue
 Mint = Lightgreen
 Blueberry = Purple
 
+UUID is a standard one: B9407F30-F5F8-466E-AFF9-25556B57FE6D, you do not have to change it
+
 Major - Minor   (color)
 ----------------------------------------
 13359 - 49963   (ice)

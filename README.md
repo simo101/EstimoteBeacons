@@ -12,13 +12,13 @@ The module requires the push notifications module in order to send notifications
 ## Setup
 
 1. Add the widget which can be found in the dist folder to the widget folder.
-2. Add the module to your project.
+2. Add the module to your project, this can be found in the module folder of this repo. There is also a test project to show you the setup.
 3. Add the pages Beacons and Notifications Admin to the navigation.
-4. Add your beacon ID's and Minor and Major numbers to the widget.
+4. Add your beacon UUID's and the Minor/Major numbers to the widget.
 5. Add the Beacons startup microflow to your microflow startup flow.
 7. Run the app.
 6. Add your beacons and notification triggers in the admin section.
-7. Include in your config.xml the plugin bellow:
+7. Include in your config.xml the bellow plugin:
 ```xml
     <plugin spec="https://github.com/vertica-as/phonegap-estimotebeacons" source="git" />
 ```

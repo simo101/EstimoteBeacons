@@ -1,6 +1,4 @@
-# MxWorld Beacons widget
-
-Cordova plugin: cordova-plugin-estimote 1.0.0 "EstimoteBeacons"
+# EstimoteBeacons Beacons widget
 
 ## Prerequisites
 

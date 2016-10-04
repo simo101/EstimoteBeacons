@@ -17,23 +17,18 @@ define([
         _range: null,
         _endPointUrl: null,
 
-        _endDate: new Date(2016, 5, 8, 16, 0, 0), // Wed Jun 08 2016 16:00:00 GMT+0200 (CEST)
+        // _endDate: new Date(2016, 5, 8, 16, 0, 0), // Wed Jun 08 2016 16:00:00 GMT+0200 (CEST)
 
         _ranging: false,
         _pauseID: null,
         _resumeID: null,
 
-        _shouldRun: function () {
-            return (new Date()) < this._endDate;
-        },
+        // _shouldRun: function () {
+        //     return (new Date()) < this._endDate;
+        // },
 
         postCreate: function() {
             logger.debug(this.id + ".postCreate");
-
-            if (!this._shouldRun()) {
-                logger.warn(this.id + ".postCreate: we're disabling this after the endDate " + this._endDate);
-                return;
-            }
 
             this._range = 3.0; //parseFloat(this.rangeString);
 
@@ -86,7 +81,6 @@ define([
 
         _onBeaconsReceivedInMonitoring: function (e) {
             var timestamp = +(new Date());
-
             if (!window.monitoringScanBeacons) {
                 window.monitoringScanBeacons = {
                     beacons: []
@@ -114,11 +108,6 @@ define([
 
         _sendBeacon: function (info) {
             if (!this._endPointUrl || !info) {
-                return;
-            }
-
-            if (!this._shouldRun()) {
-                logger.warn(this.id + "._sendBeacon: we're disabling this after the endDate " + this._endDate);
                 return;
             }
 

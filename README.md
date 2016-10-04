@@ -1,11 +1,22 @@
 # MxWorld Beacons widget
 
-Cordova plugin: cordova-plugin-estimote 0.8.0 "EstimoteBeacons"
+Cordova plugin: cordova-plugin-estimote 1.0.0 "EstimoteBeacons"
 
-Add to XML:
+## Prerequisites
+
+This module and widget requires estimote beacons to work with. These can be bought online here:
+
+https://order.estimote.com/buy/proximity-devkit
+
+The module requires the push notifications module in order to send notifications to the user that they are near a estimote beacon.
+
+
+## Setup
+
+Add to config XML:
 
 ```xml
-    <plugin spec="https://github.com/Telerik-Verified-Plugins/Estimote" source="git" />
+    <plugin spec="https://github.com/vertica-as/phonegap-estimotebeacons" source="git" />
 ```
 
 Beacons available:
@@ -43,3 +54,21 @@ Major - Minor   (color)
 46041 - 59981   (blueberry)     Location: Tea room
 41434 - 12201   (mint)          Location: Tea room
 ```
+### Widget 
+1. Add the widget which can be found in the dist folder to the widget folder.
+2. Add the module to your project.
+3. Add the pages Beacons and Notifications Admin to the navigation.
+4. Add your beacon ID's and Minor and Major numbers to the widget.
+5. Add the Beacons startup microflow to your microflow startup flow.
+7. Run the app.
+6. Add your beacons and notification triggers in the admin section.
+7. Include in your config.xml the plugin bellow:
+```xml
+    <plugin spec="https://github.com/vertica-as/phonegap-estimotebeacons" source="git" />
+```
+8. Build your phonegap app.
+
+
+
+
+
